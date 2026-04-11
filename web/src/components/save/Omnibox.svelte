@@ -147,11 +147,15 @@
     if you want to remove the community instance label,
     refer to the license first https://github.com/imputnet/cobalt/tree/main/web#license
 -->
-{#if env.DEFAULT_API !== officialApiURL}
+<!-- {#if env.DEFAULT_API !== officialApiURL}
     <div id="instance-label">
         {$t("save.label.community_instance")}
     </div>
-{/if}
+{/if} -->
+
+<div id="instance-label">
+    this instance uses {env.DEFAULT_API} for api requests.
+</div>
 
 <div id="omnibox">
     {#if $turnstileEnabled}
